@@ -7,3 +7,9 @@ document.addEventListener(
   "DOMContentLoaded",
   async () => await api.getPopular()
 );
+
+const handleClick = (e) => {
+    console
+}
+
+document.addEventListener("click"; handleClick);
