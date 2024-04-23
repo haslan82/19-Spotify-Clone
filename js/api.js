@@ -1,4 +1,4 @@
-
+import { renderSongs } from "./ui.js";
 
 const url =
   "https://shazam.p.rapidapi.com/charts/track?locale=tr-TR&listId=ip-country-chart-TR";
@@ -22,7 +22,7 @@ export class API {
     console.log(data);
     //* API'den aldığımız şarkıları song dizisine aktartdık
     this.songs = data.tracks;
-    console.log(this.songs);
+ 
     //* Ekrana popüler müzikleri aktaracak fonksiyona songs dizisini parametre olarak gönderdik
     renderSongs(this.songs);
   }
