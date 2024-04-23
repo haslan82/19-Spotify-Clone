@@ -147,6 +147,10 @@ main {
         border-radius: 50px;
         transition: all .4s ;
         opacity: 0;
+        &:hover{
+          scale: 1.2;
+          background: #159845;
+        }
       }
     }
 

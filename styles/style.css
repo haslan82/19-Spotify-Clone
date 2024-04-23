@@ -179,6 +179,10 @@ main header form ul li:hover {
   transition: all 0.4s;
   opacity: 0;
 }
+.songs .list .card figure .play:hover {
+  scale: 1.2;
+  background: #159845;
+}
 
 * {
   margin: 0;
