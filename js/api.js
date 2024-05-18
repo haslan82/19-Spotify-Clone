@@ -9,6 +9,9 @@ const options = {
     "X-RapidAPI-Host": "shazam.p.rapidapi.com",
   },
 };
+
+
+
 //* API isteklerini yönettiğimiz class yapısı
 export class API {
   constructor() {
@@ -17,14 +20,17 @@ export class API {
   //* Popüler müzikleri getirir
   async getPopular() {
     const res = await fetch( url , options);
-    console.log(res);
     const data = await res.json();
     console.log(data);
-    //* API'den aldığımız şarkıları song dizisine aktartdık
-    this.songs = data.tracks;
- 
-    //* Ekrana popüler müzikleri aktaracak fonksiyona songs dizisini parametre olarak gönderdik
-    renderSongs(this.songs);
-  }
   
+    }
+  //   
+  //   console.log(data);
+  //   //* API'den aldığımız şarkıları song dizisine aktartdık
+  //   this.songs = data.tracks;
+ 
+  //   //* Ekrana popüler müzikleri aktaracak fonksiyona songs dizisini parametre olarak gönderdik
+  //   renderSongs(this.songs);
+  // 
 }
+

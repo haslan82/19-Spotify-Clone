@@ -30,20 +30,3 @@ div.innerHTML=`
 
 
 
-/* let boy = Number(prompt("boyunuz"));
-let kilo = Number(prompt("kilonuz"));
-
-const hesapla = (x, y) =>{
-const index = x/(y*y)*100;
-return index
-};
-
-const sonuc = hesapla (boy, kilo);
-alert(sonuc); */
-
-
-/* var dizi = [1, 3, 5, 7, 9];
-for (var i = 0; i < dizi.length; i++) {
-  var yeniDeger = dizi[i] * 2;
-  console.log("Dizinin", i + 1, ". elemanının 2 ile çarpılmış değeri:", yeniDeger);
-} */
