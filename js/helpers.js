@@ -1,3 +1,3 @@
-export const elements = {
-    list:document.querySelector(".list")
-};
+// export const elements = {
+//     list:document.querySelector(".list")
+// };

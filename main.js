@@ -1,13 +1,19 @@
 import { API } from "./js/api.js";
 
 
+ const api = new API();
+
+ api.getPopular();
 
 //* Sayfa yüklendiği anda apiye istek atıp popüler müzikleri getirir
 document.addEventListener(
-  "DOMContentLoaded", () => console.log("çalıştı"));
+  "DOMContentLoaded", 
+  async () => await api.getPopular() 
+
+    console.log("çalıştı"));
   
-  const api = new API();
- api.getPopular();
+ 
+ 
 
 
 
