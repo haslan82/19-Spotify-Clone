@@ -1,25 +1,38 @@
 import { API } from "./js/api.js";
 
 
- const api = new API();
-
- api.getPopular();
+ 
+const api = new API();
+api.getPopular();
 
 //* Sayfa yüklendiği anda apiye istek atıp popüler müzikleri getirir
-document.addEventListener(
-  "DOMContentLoaded", 
-  async () => await api.getPopular() 
+document.addEventListener( "DOMContentLoaded",
+ async () => await api.getPopular()
+);
 
-    console.log("çalıştı"));
+
+//* Liste de tıklamalarda çalışır
+
+const handleClick = (e) =>{
+  if (e.target.id=== "play-btn"){
+
   
- 
- 
+ const parent = e.target.closest(".card");
+renderInfo(parent.dataset);
 
 
+}
+};
 
 
+//* Liste alanındaki tıklamaları izleme
 
-// //* Liste de tıklamalarda çalışır
+document.addEventListener("click", handleClick);
+
+  
+
+
+// 
 // const handleClick = (e) => {
 //     if (e.target.id === "play-btn") {
 //       const parent = e.target.closest(".card"); // closest ı parentElement yerine kullanırız en yakın ebeveyne götürür
@@ -29,7 +42,7 @@ document.addEventListener(
 //       playMusic(parent.dataset.url);
 //     }
 //   };
-// //* Liste alanındaki tıklamaları izleme
-// document.addEventListener("click", handleClick);
+// 
+// 
 
 
