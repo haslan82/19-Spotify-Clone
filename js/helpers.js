@@ -5,4 +5,4 @@ audio: document.querySelector("audio"),
 };
 
 
-console.log(elements.audio);
+//console.log(elements.audio);
