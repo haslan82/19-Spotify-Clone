@@ -3,26 +3,25 @@ import { elements } from "./helpers.js";
 export const renderSongs = (songs) => {
   
   
-  console.log(elements.list);
+ // console.log(elements.list);
     elements.list.innerHTML = "";
     songs.forEach((song)=> {
- console.log(song);
+ //console.log(song);
  
  //* Kart datasına kart elemanına bazı verileri ekleme
  const div = document.createElement("div");
 div.dataset.name = song.name;
 div.dataset.url = song.preview_url;
  div.dataset.img = song.album.images[1].url;
-div.dataset.artname = song.name;
+div.dataset.artname = song.artists[1]?.name;
 
-console.log(div);
+//console.log(div);
 
  div.className = "card";
-div.innerHTML =
-`
-<figure>
+div.innerHTML = `
+        <figure>
           <img 
-          src="${song.album.images[1].url}">
+          src="${song.album.images[1].url}" />
 
 
           <div class="play">
@@ -30,7 +29,7 @@ div.innerHTML =
           </div>
 
         </figure> 
-          <h4>${song.artist.external_urls.name}</h4>
+          <h4>${song.artists[1]?.name}</h4>
           <h4>${song.name}</h4>`;
 
 elements.list.appendChild(div);

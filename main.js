@@ -13,36 +13,25 @@ document.addEventListener( "DOMContentLoaded",
 
 //* Liste de tıklamalarda çalışır
 
-const handleClick = (e) =>{
-  if (e.target.id=== "play-btn"){
-
-  
- const parent = e.target.closest(".card");
-renderInfo(parent.dataset);
 
 
-}
-};
+
+//* Liste alanındaki tıklamalarda çalışır
 
 
-//* Liste alanındaki tıklamaları izleme
+const handleClick = (e) => {
+  if (e.target.id === "play-btn") {
+     
+    console.log(e.target.parentElement.parentElement.parentElement);
 
-document.addEventListener("click", handleClick);
 
+  }
+    };
   
 
+    //* Liste alanındaki tıklamaları izleme
+  document.addEventListener("click", handleClick);
 
-// 
-// const handleClick = (e) => {
-//     if (e.target.id === "play-btn") {
-//       const parent = e.target.closest(".card"); // closest ı parentElement yerine kullanırız en yakın ebeveyne götürür
-//       //* Çalınacak müziğin bilgilerini ekrana basar
-//       renderPlayingInfo(parent.dataset);
-//       //* Müziği çalar
-//       playMusic(parent.dataset.url);
-//     }
-//   };
-// 
-// 
+
 
 
