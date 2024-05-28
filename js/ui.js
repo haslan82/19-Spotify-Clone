@@ -38,9 +38,26 @@ elements.list.appendChild(div);
 
 };
 
-// const renderPlayingInfo = () => {
-  
-// };
+export const renderPlayingInfo = (song) => {
+  console.log(song);
+ elements.playingInfo.innerHTML=`
+ <img
+          src="${song.img}"
+          id="info-img"
+          alt=""
+          class=""
+        />
+        <div>
+          <p>${song.name}</p>
+          <h3>${song.artname}</h3>
+        </div>
+ `;
+ };
+
+
+ export const updateTitle = (message) => {
+  elements.title.innerText = message;
+};
 
 
 
