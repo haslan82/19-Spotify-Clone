@@ -22,7 +22,7 @@ document.addEventListener( "DOMContentLoaded",
 const handleClick = (e) => {
   if (e.target.id === "play-btn") {
      
-    console.log(e.target.parentElement.parentElement.parentElement);
+    console.log(e.target.closest(".card"));
 
 
   }
