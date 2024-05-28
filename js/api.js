@@ -1,13 +1,14 @@
 import { renderSongs } from "./ui.js";
 
-const url = 'https://spotify23.p.rapidapi.com/recommendations/?limit=42&seed_tracks=0c6xIDDpzE81m2q797ordA&seed_artists=4NHQUGzhtTLFvgF5SZesLK&seed_genres=classical%2Ccountry';
+const url = 'https://spotify23.p.rapidapi.com/recommendations/?limit=20&seed_tracks=0c6xIDDpzE81m2q797ordA&seed_artists=4NHQUGzhtTLFvgF5SZesLK&seed_genres=classical%2Ccountry';
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '4881877b7fmsh063d77fae5a42d9p1be6e9jsn8d4ae58e7971',
+		'X-RapidAPI-Key': '7e33eaab09msh5f077d37779af85p192077jsncf6b77f665e2',
 		'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
 	}
 };
+
 //*API isteklerini yönettiğimiz class yapısı
 export class API {
   constructor() {
@@ -26,9 +27,22 @@ export class API {
     
 renderSongs(this.songs);
 
-
    }
+async searchMusic(query){
+ const res = await fetch(`
+ https://spotify23.p.rapidapi.com/search/?q=${query} &type=multi&offset=30&limit=30&numberOfTopResults=10`, options
+);
+const data = await res.json();
+console.log(data)
+
+
+const newData = data.albums.items;
+console.log(newData)
+
+const updateData = newData.map((song) => ({ ...song.albums }));
+this.songs = newData;
+//console.log(this.songs);
+// aratılan şarkıları ekrana basma
+renderSongs(this.songs);
 }
-
-
-
+}

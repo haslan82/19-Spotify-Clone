@@ -1,6 +1,6 @@
 import { API } from "./js/api.js";
 import { elements } from "./js/helpers.js";
-import {renderPlayingInfo} from "./js/ui.js";
+import {renderPlayingInfo, updateTitle} from "./js/ui.js";
 
  
 const api = new API();
@@ -73,6 +73,6 @@ elements.form.addEventListener("submit", (e) => {
     return;
   }
   //* Başlığı güncelle
-  updateTitle(`${query} İçin Sonuçlar`);
-  
+  updateTitle (`${query} İçin Sonuçlar`);
+  api.searchMusic(query);
 });

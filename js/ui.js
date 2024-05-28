@@ -21,7 +21,7 @@ div.dataset.artname = song.artists[1]?.name;
 div.innerHTML = `
         <figure>
           <img 
-          src="${song.album.images[1].url}" />
+          src="${song.album?.images[1].url}" />
 
 
           <div class="play">
@@ -54,9 +54,10 @@ export const renderPlayingInfo = (song) => {
  `;
  };
 
-
+// başlığı günceller
  export const updateTitle = (message) => {
   elements.title.innerText = message;
+
 };
 
 
