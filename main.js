@@ -76,3 +76,7 @@ elements.form.addEventListener("submit", (e) => {
   updateTitle (`${query} İçin Sonuçlar`);
   api.searchMusic(query);
 });
+
+elements.menu.addEventListener("click", ()=> {
+  elements.ulList.classList.toggle("toggle");
+} )

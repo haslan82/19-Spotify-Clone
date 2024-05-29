@@ -1,4 +1,4 @@
-.playing{
+.playing {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -10,30 +10,29 @@
     gap: 50px;
     color: white;
     text-shadow: 0 0 10px black;
-    .info{
-        display: flex;
-        align-items: center;
-        gap: 30px;
-p:nth-child(1){
-    color: #d6eab5;
-    margin-bottom: 5px;
-}
-        img{
-            width: 90px;
-            border-radius: 50%;
-        }
+    .info {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      p:nth-child(1) {
+        color: #d6eab5;
+        margin-bottom: 5px;
+      }
+      img {
+        width: 90px;
+        border-radius: 50%;
+      }
     }
-}
-
-.animate{
-    animation: turn 4s infinite linear;
-}
-
-@keyframes turn {
+  }
+  .animate {
+    animation: turn 3s infinite linear;
+  }
+  @keyframes turn {
     from {
-        transform: rotate(0deg);
+      transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+      transform: rotate(360deg);
     }
-}
+  }
+  

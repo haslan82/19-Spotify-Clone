@@ -10,8 +10,9 @@ export const renderSongs = (songs) => {
  
  //* Kart datasına kart elemanına bazı verileri ekleme
  const div = document.createElement("div");
-div.dataset.name = song.name;
+//console.log("div");
 div.dataset.url = song.preview_url;
+ div.dataset.name = song.name;
  div.dataset.img = song.album.images[1].url;
 div.dataset.artname = song.artists[1]?.name;
 
@@ -21,7 +22,7 @@ div.dataset.artname = song.artists[1]?.name;
 div.innerHTML = `
         <figure>
           <img 
-          src="${song.album?.images[1].url}" />
+          src="${song.album.images[1].url}" />
 
 
           <div class="play">

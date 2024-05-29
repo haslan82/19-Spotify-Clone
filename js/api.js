@@ -28,6 +28,9 @@ export class API {
 renderSongs(this.songs);
 
    }
+
+
+   // arama metodu
 async searchMusic(query){
  const res = await fetch(`
  https://spotify23.p.rapidapi.com/search/?q=${query} &type=multi&offset=30&limit=30&numberOfTopResults=10`, options
@@ -36,10 +39,10 @@ const data = await res.json();
 console.log(data)
 
 
-const newData = data.albums.items;
+let newData = data.albums.items;
 console.log(newData)
 
-const updateData = newData.map((song) => ({ ...song.albums }));
+newData = newData.map((song) => ({ ...song.albums }));
 this.songs = newData;
 //console.log(this.songs);
 // aratılan şarkıları ekrana basma
