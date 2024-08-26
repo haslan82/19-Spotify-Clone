@@ -10,7 +10,7 @@
 ### Html, Scss, Js
 
 
-
+## Gif
 
 
 ![](images/Screen%20Recording%202024-05-29%20at%2001.21.47.62%20PM.gif)
